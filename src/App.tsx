@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react"
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom"
 import p5 from "p5"
 
 const sketch = (p: p5) => {
@@ -17,7 +18,10 @@ const sketch = (p: p5) => {
 
   p.mousePressed = (event: MouseEvent) => {
     const d = p.dist(event.clientX, event.clientY, circleX, circleY)
-    if (d < circleSize / 2) console.log("click!")
+    if (d < circleSize / 2) {
+      console.log("click!")
+      window.location.href = "/testing"
+    }
   }
 }
 
@@ -40,10 +44,28 @@ const P5Sketch: React.FC<P5SketchProps> = ({ sketch }) => {
   return <div ref={sketchRef} />
 }
 
-export default function App() {
+function HomePage() {
+  return <P5Sketch sketch={sketch} />
+}
+
+function TestingPage() {
+  const navigate = useNavigate()
   return (
     <div>
-      <P5Sketch sketch={sketch} />
+      <h1>Testing Page</h1>
+      <p>This is the testing page</p>
+      <button onClick={() => navigate("/")}>Go Home</button>
     </div>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/testing" element={<TestingPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
