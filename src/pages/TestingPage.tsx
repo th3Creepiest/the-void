@@ -7,7 +7,10 @@ export default function TestingPage() {
       <section className="text-center">
         <h1 className="text-white">Testing Page</h1>
         <p className="text-white">This is the testing page</p>
-        <button className="text-black bg-white" onClick={() => navigate("/")}>
+        <button
+          className="text-black bg-white rounded hover:bg-red-950 hover:text-white m-2 p-2"
+          onClick={() => navigate("/")}
+        >
           Go Home
         </button>
       </section>
