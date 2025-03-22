@@ -9,11 +9,21 @@ const sketch = (p: p5) => {
 
   p.setup = () => {
     p.createCanvas(window.innerWidth, window.innerHeight)
-    p.background(3)
     p.noStroke()
+    p.frameRate(30)
     circleX = p.width / 2
     circleY = p.height / 2
+  }
+
+  p.draw = () => {
+    p.background(3)
     p.ellipse(circleX, circleY, circleSize, circleSize)
+  }
+
+  p.windowResized = () => {
+    p.resizeCanvas(window.innerWidth, window.innerHeight)
+    circleX = p.width / 2
+    circleY = p.height / 2
   }
 
   p.mousePressed = (event: MouseEvent) => {
