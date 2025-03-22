@@ -14,7 +14,7 @@ export const circle = (p: p5) => {
   }
 
   p.draw = () => {
-    p.background(3)
+    p.background(0)
     p.ellipse(circleX, circleY, circleSize, circleSize)
   }
 

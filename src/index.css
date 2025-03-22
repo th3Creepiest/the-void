@@ -1,1 +1,21 @@
 @import "tailwindcss";
+
+:root {
+  background-color: white;
+  color-scheme: light;
+}
+
+.dark {
+  background-color: #111827; /* or your preferred dark background color */
+  color-scheme: dark;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+html {
+  transition-property: background-color;
+  transition-duration: 200ms;
+}
