@@ -19,7 +19,6 @@ const sketch = (p: p5) => {
   p.mousePressed = (event: MouseEvent) => {
     const d = p.dist(event.clientX, event.clientY, circleX, circleY)
     if (d < circleSize / 2) {
-      console.log("click!")
       window.location.href = "/testing"
     }
   }

@@ -8,5 +8,5 @@ a ts + react + vite + react-router + p5 + tailwind thing...
 - [x] typescript
 - [x] vite
 - [x] p5
-- [ ] react router
-- [ ] tailwind
+- [x] react router
+- [x] tailwind
