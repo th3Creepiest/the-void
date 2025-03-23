@@ -1,6 +1,6 @@
 # 🕳️ ️the Void 🕳️
 
-a ts + react + vite + react-router + p5 + tailwind thing...
+A ts + react + vite + react-router + p5 + tailwind thing...
 
 ## stack
 

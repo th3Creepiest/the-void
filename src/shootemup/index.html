@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="data:," />
+    <title>2D Shooter Game</title>
+    <link rel="stylesheet" href="/src/shootemup/style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="game-info">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="health">Health: <span id="health">100</span></div>
+      </div>
+      <canvas id="gameCanvas"></canvas>
+      <div class="controls-info">
+        <p>Controls: Move with WASD or Arrow Keys, Shoot with Space</p>
+      </div>
+    </div>
+    <div class="game-over hidden" id="gameOver">
+      <h2>Game Over</h2>
+      <p>Your final score: <span id="finalScore">0</span></p>
+      <button id="restartButton">Play Again</button>
+    </div>
+    <script src="/src/shootemup/game.js"></script>
+  </body>
+</html>
